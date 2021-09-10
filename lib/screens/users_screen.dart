@@ -45,7 +45,6 @@ class _UsersScreenState extends State<UsersScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  // builder: (context) => Albums(
                                   builder: (context) => UserDetailsScreen(
                                     user: item,
                                   ),

@@ -1,18 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:jsonplaceholder/models/Album.dart';
-import 'package:jsonplaceholder/models/Photo.dart';
-import 'package:jsonplaceholder/models/Photo.dart';
-import 'package:jsonplaceholder/models/Photo.dart';
-import 'package:jsonplaceholder/models/Photo.dart';
-import 'package:jsonplaceholder/models/Post.dart';
-
 import 'package:http/http.dart' as http;
+import 'package:jsonplaceholder/models/post_model.dart';
+import 'package:jsonplaceholder/models/photo_model.dart';
 import 'package:jsonplaceholder/models/user_model.dart';
-import 'package:jsonplaceholder/services/all_services.dart';
+import 'package:jsonplaceholder/screens/image_viewer.dart';
 
 class UsersPhotos extends StatefulWidget {
   final UserModel user;
@@ -41,7 +35,6 @@ class _UsersPhotosState extends State<UsersPhotos> {
     }
   }
 
-  Allservices _allservices = Allservices();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,12 +46,10 @@ class _UsersPhotosState extends State<UsersPhotos> {
       ),
       body: Container(
         child: FutureBuilder(
-          // future: _allservices.fetchAlbums(),
           future: fetchAlbums(),
           builder:
               (BuildContext context, AsyncSnapshot<List<PhotoModel>> snapshot) {
             if (snapshot.hasData) {
-              // return Text(widget.post.body);
               return GridView.count(
                 primary: false,
                 padding: const EdgeInsets.all(10),
@@ -69,14 +60,14 @@ class _UsersPhotosState extends State<UsersPhotos> {
                   for (var item in snapshot.data)
                     InkWell(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => ImageViewer(
-                        //       photo: item,
-                        //     ),
-                        //   ),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ImageViewer(
+                              photo: item,
+                            ),
+                          ),
+                        );
                       },
                       child: Container(
                         color: Theme.of(context).accentColor.withAlpha(10),

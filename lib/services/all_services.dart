@@ -1,9 +1,10 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:jsonplaceholder/models/Photo.dart';
-import 'package:jsonplaceholder/models/Post.dart';
+import 'package:jsonplaceholder/models/photo_model.dart';
+import 'package:jsonplaceholder/models/post_model.dart';
 import 'package:jsonplaceholder/models/user_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Allservices {
   static String mainUrl = "https://jsonplaceholder.typicode.com/";

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jsonplaceholder/models/Post.dart';
+import 'package:jsonplaceholder/models/post_model.dart';
 import 'package:jsonplaceholder/models/user_model.dart';
 import 'package:jsonplaceholder/screens/user_photos.dart';
 import 'package:jsonplaceholder/services/all_services.dart';
@@ -68,7 +68,6 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                             ),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              // mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Text(
                                   item.name,
@@ -235,10 +234,9 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => UsersPhotos(
-                                          user: widget.user,
-                                        //  album: item,
-                                        post : items,
-                                        )));
+                                              user: widget.user,
+                                              post: items,
+                                            )));
                               },
                               child: Text(
                                 "Click for more",
