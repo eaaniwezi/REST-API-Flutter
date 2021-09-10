@@ -7,6 +7,7 @@ import 'package:jsonplaceholder/models/post_model.dart';
 import 'package:jsonplaceholder/models/photo_model.dart';
 import 'package:jsonplaceholder/models/user_model.dart';
 import 'package:jsonplaceholder/screens/image_viewer.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class UsersPhotos extends StatefulWidget {
   final UserModel user;
@@ -22,12 +23,16 @@ class UsersPhotos extends StatefulWidget {
 }
 
 class _UsersPhotosState extends State<UsersPhotos> {
+  SharedPreferences preferences;
+
   Future<List<PhotoModel>> fetchAlbums() async {
+    preferences = await SharedPreferences.getInstance();
     var response = await http.get(
         'https://jsonplaceholder.typicode.com/photos?albumId=' +
             widget.post.id.toString());
 
     if (response.statusCode == 200) {
+      await preferences.setString("key", response.body);
       return List<PhotoModel>.from(
           json.decode(response.body).map((x) => PhotoModel.fromJson(x)));
     } else {

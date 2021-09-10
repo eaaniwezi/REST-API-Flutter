@@ -73,7 +73,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.name,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -81,7 +81,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.email,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -89,7 +89,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.phone,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -97,7 +97,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.website,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -105,7 +105,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.company.name,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -113,7 +113,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.company.catchPhrase,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -121,7 +121,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   " \"${item.company.bs.toUpperCase()}\" ",
                                   style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 15,
+                                      fontSize: 12,
                                       fontWeight: FontWeight.w700,
                                       fontStyle: FontStyle.italic),
                                 ),
@@ -129,7 +129,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.address.street,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -137,7 +137,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.address.suite,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -145,7 +145,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.address.city,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
@@ -153,7 +153,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                   item.address.zipcode,
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 12,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),

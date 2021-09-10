@@ -21,57 +21,57 @@ class _ImageViewerState extends State<ImageViewer> {
           backgroundColor: Color(0xFF151C26),
           title: Text("Post id:: " + widget.photo.id.toString()),
         ),
-        body: Column(
-          children: [
-            Container(
-              // color: Colors.red,
-              // width: double.infinity,
-              height: MediaQuery.of(context).size.height * .15,
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Post title::",
-                          style: TextStyle(
-                            fontSize: 17,
-                            fontWeight: FontWeight.w900,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height * .25,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Post title::",
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.w900,
+                            ),
                           ),
-                        ),
-                        SingleChildScrollView(
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * .1,
-                            child: Text(
-                              widget.photo.title,
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500,
+                          SingleChildScrollView(
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * .12,
+                              child: Text(
+                                widget.photo.title,
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: MediaQuery.of(context).size.height * .5,
-                child: PhotoView(
-                  imageProvider: NetworkImage(widget.photo.url),
-                  backgroundDecoration: BoxDecoration(
-                    color: Theme.of(context).backgroundColor,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: MediaQuery.of(context).size.height * .5,
+                  child: PhotoView(
+                    imageProvider: NetworkImage(widget.photo.url),
+                    backgroundDecoration: BoxDecoration(
+                      color: Theme.of(context).backgroundColor,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ));
   }
 }
